@@ -5,6 +5,12 @@ operator-level resource allocation. CBAPrep combines runtime models, a GBDT
 benefit predictor, candidate pipeline search and CARO allocation using
 zeroth-order Frank-Wolfe (ZOFW).
 
+## Framework overview
+
+[![CBAPrep framework overview](docs/images/cbaprep-framework.png)](docs/images/cbaprep-framework.pdf)
+
+CBAPrep combines offline cost-benefit modeling with online pipeline search and CARO resource allocation to meet user-specified cost and performance requirements.
+
 ## Release scope
 
 This is a **core implementation release**, not a complete reproduction package
