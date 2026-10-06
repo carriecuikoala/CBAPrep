@@ -5,9 +5,11 @@ code, running processes and historical results were not modified.
 
 Included: import dependencies of search, the automatic launcher, ZOFW adapter,
 runtime profiling and benefit sampling/fitting; required operators/classifiers;
-data format instructions; and a synthetic optimizer example.
+data format instructions; a synthetic optimizer example; and, as of 2026-10-06,
+18 dataset CSV/metadata pairs listed in `data/README.md` with checksums in
+`data/manifest.json`.
 
-Excluded: all `modules/experiment` scripts, datasets, checkpoints, trained pickle
+Excluded: all `modules/experiment` scripts, `covtype` and `susy`, checkpoints, trained pickle
 artifacts, logs, cached results, manuscript files, SSH/editor settings,
 unreferenced runners/studies, empty advanced-cleaning placeholders and standalone
 operator demonstrations. Compatibility optimizers and small human/machine cost

@@ -13,10 +13,10 @@ CBAPrep combines offline cost-benefit modeling with online pipeline search and C
 
 ## Release scope
 
-This is a **core implementation release**, not a complete reproduction package
-for the paper's tables and figures. It includes the offline model-building entry
-points needed by the main workflow and a synthetic API example. It excludes
-benchmark datasets, pretrained predictors, hardware-specific cost profiles,
+This is a **core implementation release with 18 benchmark datasets**, not a
+complete reproduction package for the paper's tables and figures. It includes
+the offline model-building entry points needed by the main workflow and a
+synthetic API example. It excludes pretrained predictors, hardware-specific cost profiles,
 baseline systems, experiment orchestration, plotting scripts and historical
 results. No artifact badge or publication acceptance is claimed.
 
@@ -62,6 +62,14 @@ The fixed-pipeline adapter also accepts `enforce_budget` and
 consistent units; projection assumes affine cost in the degrees. ZOFW returns an
 approximate candidate, not a globally optimal solution. A predicted budget is not
 a measured runtime guarantee.
+
+## Datasets
+
+The repository includes 18 datasets under `data/`, each with `data.csv` and
+`info.json`; `covtype` and `susy` are excluded. See [the dataset inventory](data/README.md)
+for row counts, target columns and CLI aliases, and [the manifest](data/manifest.json)
+for file sizes and SHA-256 checksums. To use a bundled dataset in the commands
+below, replace `my_dataset` with its directory name or alias, such as `abalone`.
 
 ## Use your own dataset
 

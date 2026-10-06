@@ -16,3 +16,17 @@ Optional XGBoost was not exercised.
 
 The real-data offline profiling/training/search workflow is documented from its
 CLI, but is not claimed to have been reproduced by these smoke checks.
+
+## Dataset packaging checks (2026-10-06)
+
+Checked the 18 bundled datasets in an existing Windows environment using Python
+3.10.18, NumPy 2.0.1, pandas 2.3.2, SciPy 1.15.3 and scikit-learn 1.7.1.
+All 36 CSV/JSON files match the supplied files byte-for-byte by SHA-256.
+All dataset aliases resolve, CSVs load, target columns exist with no missing
+labels, and the current conversion and 40/30/30 split path completes for all
+18 datasets. Splits have disjoint row indices and retain every converted row.
+File and dataset statistics are recorded in `data/manifest.json`.
+
+These checks validate packaging and the input/split path. They do not validate a
+fresh dependency installation, full offline model fitting, baseline comparisons,
+or reproduction of the paper's tables and figures.

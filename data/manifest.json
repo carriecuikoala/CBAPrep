@@ -1,0 +1,430 @@
+{
+  "datasets": [
+    {
+      "dataset": "abalone",
+      "alias": "abalone",
+      "rows": 4177,
+      "features": 8,
+      "target": "label",
+      "classes": 28,
+      "split_rows": {
+        "train": 1670,
+        "validation": 1253,
+        "test": 1254
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 196081,
+          "sha256": "4ea021373122c12f686b219ba82d8f32627f33dc60b382c9a983070bd5ebdd9d"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "8de66d3f65473049c0a2e1d73db8466ebc50b08f41df29892cd2f2803a485109"
+        }
+      }
+    },
+    {
+      "dataset": "ada_prior",
+      "alias": "ada",
+      "rows": 4562,
+      "features": 14,
+      "target": "label",
+      "classes": 2,
+      "split_rows": {
+        "train": 1824,
+        "validation": 1369,
+        "test": 1369
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 489822,
+          "sha256": "0b9db26293e2c0a36c799ba8472c6ce883f96340216d599a2b556ec6bcc235ca"
+        },
+        "info.json": {
+          "bytes": 310,
+          "sha256": "7fbb589dc657247688fa4a94e2736daed9aab21e6b6beb9a11d5f3f1c3ce9df4"
+        }
+      }
+    },
+    {
+      "dataset": "avila",
+      "alias": "avila",
+      "rows": 20867,
+      "features": 10,
+      "target": "Class",
+      "classes": 12,
+      "split_rows": {
+        "train": 8346,
+        "validation": 6260,
+        "test": 6261
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 1999298,
+          "sha256": "9ed2d6aadf88d5f32789fe76422953eddd005da042d5c4ab7fc7abe887edc078"
+        },
+        "info.json": {
+          "bytes": 56,
+          "sha256": "d4dabd273f6d3ce2efb77d826d6bd6c5270a14288b6c9e1cf639663620bd60dc"
+        }
+      }
+    },
+    {
+      "dataset": "connect-4",
+      "alias": "connect",
+      "rows": 67557,
+      "features": 42,
+      "target": "class",
+      "classes": 3,
+      "split_rows": {
+        "train": 27022,
+        "validation": 20267,
+        "test": 20268
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 5877592,
+          "sha256": "00015ae83490728d33d67ca274c208d0bcc2ece4590d1f79c7ae67f3a123b771"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "5f9dfe34b7e8a20302e3889f3314d2b5c26966dba294962da7fb39917ecf5754"
+        }
+      }
+    },
+    {
+      "dataset": "eeg",
+      "alias": "eeg",
+      "rows": 14980,
+      "features": 14,
+      "target": "Class",
+      "classes": 2,
+      "split_rows": {
+        "train": 5992,
+        "validation": 4494,
+        "test": 4494
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 1696124,
+          "sha256": "e05af6143036e9f86b0666120c77c241cb4744aacaba63276b7c640fcb6728ab"
+        },
+        "info.json": {
+          "bytes": 64,
+          "sha256": "b2282a7db951515cb7c5dbe3ede85d8364853abc4bb5c48494ac77e3035cc9f5"
+        }
+      }
+    },
+    {
+      "dataset": "google",
+      "alias": "google",
+      "rows": 9367,
+      "features": 8,
+      "target": "Rating>4.2",
+      "classes": 2,
+      "split_rows": {
+        "train": 3746,
+        "validation": 2810,
+        "test": 2811
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 561339,
+          "sha256": "eb404e67fec997bdc81d912b844ef39620834842b4d2257b7bc261db4070b3c1"
+        },
+        "info.json": {
+          "bytes": 31,
+          "sha256": "b92c1e30e66e23d3c6cc1eaa46995e22d5ebd232ea2a5d042b66fbdbcff4224d"
+        }
+      }
+    },
+    {
+      "dataset": "house_prices",
+      "alias": "house",
+      "rows": 1460,
+      "features": 80,
+      "target": "SalePrice>150k",
+      "classes": 2,
+      "split_rows": {
+        "train": 583,
+        "validation": 439,
+        "test": 438
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 441024,
+          "sha256": "f313c88d528a09f3748a696cd8dace387735c97431334f423018def6d05d98db"
+        },
+        "info.json": {
+          "bytes": 35,
+          "sha256": "9c666fba611b499ead191f1bde1059876536dec3a1c7cdd5e76cf9b54b01dc69"
+        }
+      }
+    },
+    {
+      "dataset": "jungle_chess_2pcs_raw_endgame_complete",
+      "alias": "jungle",
+      "rows": 44819,
+      "features": 6,
+      "target": "class",
+      "classes": 3,
+      "split_rows": {
+        "train": 17927,
+        "validation": 13446,
+        "test": 13446
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 672408,
+          "sha256": "8828a19db419d460fa4569495a4a6fb460e33271996c88ddfee475a2ead9aab3"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "5f9dfe34b7e8a20302e3889f3314d2b5c26966dba294962da7fb39917ecf5754"
+        }
+      }
+    },
+    {
+      "dataset": "microaggregation2",
+      "alias": "micro",
+      "rows": 20000,
+      "features": 20,
+      "target": "class",
+      "classes": 5,
+      "split_rows": {
+        "train": 8000,
+        "validation": 6000,
+        "test": 6000
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 1905900,
+          "sha256": "4916cc095dafa7909a788922d0434c2639ffe704715fc6fbee0daf90e11df9f8"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "5f9dfe34b7e8a20302e3889f3314d2b5c26966dba294962da7fb39917ecf5754"
+        }
+      }
+    },
+    {
+      "dataset": "mozilla4",
+      "alias": "mozilla4",
+      "rows": 15545,
+      "features": 5,
+      "target": "state",
+      "classes": 2,
+      "split_rows": {
+        "train": 6217,
+        "validation": 4664,
+        "test": 4664
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 529171,
+          "sha256": "17ebfe7a96d723035eef99b0de1c56059b59c5dc03748c63a95c76a2b402dfa9"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "7c214a85ec5ef970c9f25260e73624375fdec09e60fe7ecfa3abdd4efece3b7c"
+        }
+      }
+    },
+    {
+      "dataset": "obesity",
+      "alias": "obesity",
+      "rows": 2111,
+      "features": 16,
+      "target": "NObeyesdad",
+      "classes": 7,
+      "split_rows": {
+        "train": 844,
+        "validation": 633,
+        "test": 634
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 263646,
+          "sha256": "28b6991062855d3d15642e38b1aa9d1b32fb7abbb5abf5b096f1868cd706154b"
+        },
+        "info.json": {
+          "bytes": 139,
+          "sha256": "5f63d04afdc6ee26969221f5bdd6abd73b0deee5ca28ae1ddbf18eee3adf4139"
+        }
+      }
+    },
+    {
+      "dataset": "page-blocks",
+      "alias": "page",
+      "rows": 5473,
+      "features": 10,
+      "target": "class",
+      "classes": 5,
+      "split_rows": {
+        "train": 2189,
+        "validation": 1642,
+        "test": 1642
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 246396,
+          "sha256": "7ac49d18d87dfc712621150a81e036ed238ea05aa1dcb39748760e5d9acf8d1e"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "5f9dfe34b7e8a20302e3889f3314d2b5c26966dba294962da7fb39917ecf5754"
+        }
+      }
+    },
+    {
+      "dataset": "pbcseq",
+      "alias": "pbcseq",
+      "rows": 1945,
+      "features": 18,
+      "target": "binaryClass",
+      "classes": 2,
+      "split_rows": {
+        "train": 777,
+        "validation": 584,
+        "test": 584
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 153690,
+          "sha256": "9fdda0b5a9c1f7aa94471bafc47a185be51ee1ca5c54d89a58a91d257c020619"
+        },
+        "info.json": {
+          "bytes": 217,
+          "sha256": "c9483808721840ffd2d07562bb3b9afc6403ba01992255db6640ef4a7e904160"
+        }
+      }
+    },
+    {
+      "dataset": "pol",
+      "alias": "pol",
+      "rows": 15000,
+      "features": 48,
+      "target": "binaryClass",
+      "classes": 2,
+      "split_rows": {
+        "train": 6000,
+        "validation": 4500,
+        "test": 4500
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 1731450,
+          "sha256": "0a987059b4fbd9cec67c580c798d8939b9bdc51ed4fe3f095d12edd0d36b5d45"
+        },
+        "info.json": {
+          "bytes": 32,
+          "sha256": "7749a6353dd30fd9e56d100189ae7a575d219a7a951f4a2b065fcd0811706011"
+        }
+      }
+    },
+    {
+      "dataset": "Run_or_walk_information",
+      "alias": "run_or_walk",
+      "rows": 88588,
+      "features": 6,
+      "target": "activity",
+      "classes": 2,
+      "split_rows": {
+        "train": 35434,
+        "validation": 26577,
+        "test": 26577
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 4248664,
+          "sha256": "afe4d4410b9a36b1d121f3e6b6be6c7ee6fea68bbdc971bcbf8cc7072036f276"
+        },
+        "info.json": {
+          "bytes": 29,
+          "sha256": "890abe3edcd045c24ed16e5b1b2cfd801f15be4038d91f4036b58c0296499fb2"
+        }
+      }
+    },
+    {
+      "dataset": "shuttle",
+      "alias": "shuttle",
+      "rows": 58000,
+      "features": 9,
+      "target": "class",
+      "classes": 7,
+      "split_rows": {
+        "train": 23200,
+        "validation": 17400,
+        "test": 17400
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 2407809,
+          "sha256": "48c62a63aefa8448f173973e0583e8cf74545945a671124e1dfceb464203c9c4"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "5f9dfe34b7e8a20302e3889f3314d2b5c26966dba294962da7fb39917ecf5754"
+        }
+      }
+    },
+    {
+      "dataset": "USCensus",
+      "alias": "uscensus",
+      "rows": 32561,
+      "features": 14,
+      "target": "Income",
+      "classes": 2,
+      "split_rows": {
+        "train": 13024,
+        "validation": 9768,
+        "test": 9769
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 3835691,
+          "sha256": "112022fcdb52c1943027edd68fff711f13439d4692ae7d59a0c005308371272a"
+        },
+        "info.json": {
+          "bytes": 27,
+          "sha256": "42bd76bc5ec8802d19f8c082d9a2bb382a74cb3e70151adb3c7b4668b95dedc2"
+        }
+      }
+    },
+    {
+      "dataset": "wall-robot-navigation",
+      "alias": "wall",
+      "rows": 5456,
+      "features": 24,
+      "target": "Class",
+      "classes": 4,
+      "split_rows": {
+        "train": 2182,
+        "validation": 1637,
+        "test": 1637
+      },
+      "files": {
+        "data.csv": {
+          "bytes": 753810,
+          "sha256": "41fe3c421687454a611a57f135240c21c9bfb9d299ce1f07eaa98cd354f21365"
+        },
+        "info.json": {
+          "bytes": 26,
+          "sha256": "faf61addbfe8ebae940bed44e7d15b4d6df28045513ffa0b88ce4cfe6599efb7"
+        }
+      }
+    }
+  ],
+  "excluded_datasets": [
+    "covtype",
+    "susy"
+  ],
+  "split": {
+    "train_fraction": 0.4,
+    "validation_fraction": 0.3,
+    "test_fraction": 0.3,
+    "random_state": 42,
+    "stratified": false
+  },
+  "validation_scope": "File integrity, CSV/target loading, and conversion/splitting only; no full paper experiments."
+}
