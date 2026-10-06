@@ -135,16 +135,3 @@ bundled. Only load model pickle files from trusted sources.
 Monte Carlo and compatible FW modules remain because the main searcher imports
 and exposes them. Unreferenced runners, study scripts and placeholder frameworks
 are excluded. Some code comments remain in Chinese; this usage guide is English.
-
-## Availability and limitations
-
-PVLDB's [submission guidelines](https://www.vldb.org/2027/submission-guidelines.html)
-require supplementary materials supporting reported results. This core-only
-release does not claim to satisfy complete experimental reproducibility. The
-paper's datasets, full experiment commands and pretrained artifacts are outside
-this release. See `docs/RELEASE_SCOPE.md` for cleanup and release-only changes.
-
-No software license has been selected. Public availability alone does not grant
-a general reuse/redistribution license; contact the maintainers through GitHub
-for licensing questions. Report bugs via GitHub Issues. Bibliographic details
-can be added when available; no DOI or acceptance status is inferred.
