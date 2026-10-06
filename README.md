@@ -54,6 +54,36 @@ consistent units; projection assumes affine cost in the degrees. ZOFW returns an
 approximate candidate, not a globally optimal solution. A predicted budget is not
 a measured runtime guarantee.
 
+## Supported downstream models
+
+The repository includes the training and evaluation code for nine downstream
+classification models in
+[`classifier.py`](modules/ml_modules/Classification/classifier.py):
+
+| `--model` | Model | Implementation |
+|---|---|---|
+| `LDA` | Linear discriminant analysis | `sklearn.discriminant_analysis.LinearDiscriminantAnalysis` |
+| `CART` | Decision tree | `sklearn.tree.DecisionTreeClassifier` |
+| `NB` | Gaussian naive Bayes | `sklearn.naive_bayes.GaussianNB` |
+| `MNB` | Multinomial naive Bayes | `sklearn.naive_bayes.MultinomialNB` |
+| `LR` | Logistic regression | `sklearn.linear_model.LogisticRegression` |
+| `RF` | Random forest | `sklearn.ensemble.RandomForestClassifier` |
+| `XGB` | XGBoost | `xgboost.XGBClassifier` |
+| `MLP` | Multilayer perceptron | `sklearn.neural_network.MLPClassifier` |
+| `SVM` | Support vector machine with an RBF kernel | `sklearn.svm.SVC` |
+
+Select a model with `--model`, for example `--model RF`, in benefit-data
+generation, benefit-predictor fitting, pipeline search and baseline comparison.
+Use the same model throughout these steps; a dataset-specific benefit predictor
+must be fitted for the selected dataset/model pair. Downstream classifiers are
+trained during execution; pretrained classifier weights are not required.
+
+The scikit-learn models are covered by `requirements.txt`. For `XGB`, also run
+`python -m pip install xgboost` in the active environment. `MNB` requires
+nonnegative input features, so choose preprocessing that preserves nonnegativity.
+The classifier reports accuracy and macro-F1 when a held-out evaluation set is
+provided.
+
 ## Datasets
 
 The repository includes 18 datasets under `data/`, each with `data.csv` and
@@ -138,7 +168,7 @@ python -m modules.experiment.run_fair_budget_workflow --datasets abalone --model
 
 This compares CBAPrep with Random-Budget Search, Greedy-Knapsack and
 Uniform-Budget Allocation and generates CSVs, Markdown tables and PNG plots
-under `artifacts/experiments/budget/baselines/`. It does not include CAPS.
+under `artifacts/experiments/budget/baselines/`.
 
 ## Code map
 
