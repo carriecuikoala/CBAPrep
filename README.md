@@ -15,10 +15,11 @@ CBAPrep combines offline cost-benefit modeling with online pipeline search and C
 
 This is a **core implementation release with 18 benchmark datasets**, not a
 complete reproduction package for the paper's tables and figures. It includes
-the offline model-building entry points needed by the main workflow and a
-synthetic API example. It excludes pretrained predictors, hardware-specific cost profiles,
-baseline systems, experiment orchestration, plotting scripts and historical
-results. No artifact badge or publication acceptance is claimed.
+the offline model-building entry points, a synthetic API example, and the
+budget-aware comparison workflow for CBAPrep, Random-Budget Search,
+Greedy-Knapsack and Uniform-Budget Allocation. Pretrained predictors,
+hardware-specific cost profiles, external baseline systems and historical paper
+results are not bundled. No artifact badge or publication acceptance is claimed.
 
 ## Installation
 
@@ -102,6 +103,11 @@ predicted preparation execution budget, in seconds. Generated models are stored
 under `artifacts/` and reused when available. Keep artifacts for different dataset
 contents/configurations separate rather than silently reusing stale predictors.
 
+For held-out baseline evaluation, use the explicit preparation commands in
+[the comparison guide](docs/BUDGET_BASELINES.md). They set
+`--benefit_label_source train_holdout`; the automatic launcher's sampling step
+currently inherits the generator's `test` default.
+
 Once models exist, invoke search directly:
 
 ```bash
@@ -125,6 +131,25 @@ python -m modules.benefit_predictor.gbr_regressor --help
 Real-data search needs locally fitted cost and benefit models, which are not
 bundled. Only load model pickle files from trusted sources.
 
+## Budget-aware baseline comparison
+
+The comparison scripts use the legacy operator space and report held-out test
+accuracy/F1, measured preparation time, budget utilization and gain per cost.
+[The comparison guide](docs/BUDGET_BASELINES.md) provides the offline preparation
+commands, a tested small run, the 18-dataset batch command and output definitions.
+Its benefit-training commands explicitly use a training-set holdout to keep the
+final test set out of predictor fitting.
+
+After preparing the cost and benefit models for `abalone`, run:
+
+```bash
+python -m modules.experiment.run_fair_budget_workflow --datasets abalone --model LR --budgets 0.3,0.5,0.7,1.0 --cost_param e_dataset_method --benefit_model specific --optimizer zofw --random_state 42 --output_tag abalone_comparison
+```
+
+This compares CBAPrep with Random-Budget Search, Greedy-Knapsack and
+Uniform-Budget Allocation and generates CSVs, Markdown tables and PNG plots
+under `artifacts/experiments/budget/baselines/`. It does not include CAPS.
+
 ## Code map
 
 | Path | Purpose |
@@ -139,6 +164,8 @@ bundled. Only load model pickle files from trusted sources.
 | `modules/optimizer/auto_pipeline_search.py` | Offline-to-online CLI workflow |
 | `modules/ml_modules/Classification/` | Downstream classifier adapters |
 | `examples/minimal_caro.py` | Synthetic optimizer example and sanity assertions |
+| `modules/experiment/budget_aware_baselines.py` | CBAPrep and three budget-aware baseline methods |
+| `modules/experiment/run_fair_budget_workflow.py` | Dataset/budget runs, resumable CSVs, tables and plots |
 
 Monte Carlo and compatible FW modules remain because the main searcher imports
 and exposes them. Unreferenced runners, study scripts and placeholder frameworks

@@ -30,3 +30,19 @@ File and dataset statistics are recorded in `data/manifest.json`.
 These checks validate packaging and the input/split path. They do not validate a
 fresh dependency installation, full offline model fitting, baseline comparisons,
 or reproduction of the paper's tables and figures.
+
+## Budget-comparison workflow check (2026-10-06)
+
+Both experiment entry points passed `--help` in the same Windows environment.
+Starting with no fitted models in this checkout, the small-run commands in
+`BUDGET_BASELINES.md` completed for `abalone`: 28 runtime-profiling tasks, 12
+benefit samples from a training-set holdout, a 10-estimator GBDT, then CBAPrep
+and all three budget-aware baselines at a 1-second execution budget.
+The run used 3 candidate combinations, 3 random candidates, one CBAPrep restart
+and one final execution per method. It produced four result rows, combined and
+per-case CSVs, summary CSVs, a Markdown report and six PNG plots.
+
+This is an end-to-end small-run check in an existing environment. It is not a
+fresh-install check, an 18-dataset benchmark, a predictor-quality assessment or
+a reproduction of historical paper results. Generated smoke-test models and
+results remain under the ignored `artifacts/` directory.
