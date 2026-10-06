@@ -11,16 +11,6 @@ zeroth-order Frank-Wolfe (ZOFW).
 
 CBAPrep combines offline cost-benefit modeling with online pipeline search and CARO resource allocation to meet user-specified cost and performance requirements.
 
-## Release scope
-
-This is a **core implementation release with 18 benchmark datasets**, not a
-complete reproduction package for the paper's tables and figures. It includes
-the offline model-building entry points, a synthetic API example, and the
-budget-aware comparison workflow for CBAPrep, Random-Budget Search,
-Greedy-Knapsack and Uniform-Budget Allocation. Pretrained predictors,
-hardware-specific cost profiles, external baseline systems and historical paper
-results are not bundled. No artifact badge or publication acceptance is claimed.
-
 ## Installation
 
 Python 3.11 is the tested interpreter. From the repository root:
